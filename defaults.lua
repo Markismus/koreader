@@ -116,6 +116,9 @@ DAUTO_SAVE_PAGING_COUNT = nil
 -- dictionary font size
 DDICT_FONT_SIZE = 20
 
+-- toggle the use of cgm999's suspend feature as fix for at least Kobo Aura
+-- true enables, false disables.
+CGM999FIX = true
 -- ####################################################################
 -- following features are not supported right now
 -- ####################################################################

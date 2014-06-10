@@ -189,7 +189,13 @@ function Device:prepareSuspend() -- currently only used for kobo devices
 end
 
 function Device:Suspend() -- currently only used for kobo devices
-    os.execute("./suspend.sh")
+     -- this line toggles between the standard value and the one working with cgm999's fix
+    if CGM999FIX then
+        os.execute("./cgm_suspend &")
+    else 
+        os.execute("./suspend.sh")
+    end
+
 end
 
 function Device:Resume() -- currently only used for kobo devices

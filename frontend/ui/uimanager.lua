@@ -298,7 +298,8 @@ function UIManager:run()
                 local InfoMessage = require("ui/widget/infomessage")
                 self:show(InfoMessage:new{
                     text = _("Standby"),
-                    timeout = 1,
+                    -- this line toggles between the standard value and the one working with cgm999's fix
+                    timeout = CGM999FIX and 4 or 1,
                 })
                 self:sendEvent(Event:new("FlushSettings"))
                 Device:prepareSuspend()
